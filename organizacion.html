@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organización de las Computadoras</title>
+    <link rel="stylesheet" href="organizacion.css">
+</head>
+</body>
+    <main>
+        <h2>organizacion de las Computadoras</h2>
+        <p>Responde correctamente a la siguientes preguntas:</p>
+
+        
+        <div class="pregunta-box">
+            <p><strong>1. ¿Cuál es el componente considerado el "cerebro" de la computadora?</strong></p>
+            <button onclick="Pregunta(false, '¡MAL hay!')">A) Memoria RAM</button>
+            <button onclick="Pregunta(true, ' La CPU procesa todos los datos.')">B) CPU (Procesador)</button>
+        </div>
+
+
+        <div class="pregunta-box">
+        <p><strong>2.  ¿cual de estos componentes el la parte fisica de la computadora?</strong></p>
+            <button onclick="Pregunta(true, ' Es memoria de acceso aleatorio temporal.')">A)B)hardware</button>
+            <button onclick="Pregunta(false, 'ufff.')">B)sortwate</button>
+        </div>
+    </main>
+    
+    <script>
+        function Pregunta(esCorrecta, mensaje) {
+            if(esCorrecta) {
+                alert("¡GENIO! " + mensaje);
+            } else {
+                alert("Lo siento, respuesta incorrecta. ¡Vuelve a intentarlo! (" + mensaje + ")");
+            }
+        }
+    </script>
+</body>
+</html>
