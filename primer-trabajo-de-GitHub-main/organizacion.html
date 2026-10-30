@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organización de las Computadoras</title>
+    <link rel="stylesheet" href="organizacion.css">
+</head>
+<body>
+    <main>
+        <h2>organizacion de las Computadoras</h2>
+        <p>Responde correctamente a la siguientes preguntas:</p>
+
+        
+        <div class="pregunta-box">
+            <p><strong>1. ¿Cuál es el componente considerado el "cerebro" de la computadora?</strong></p>
+            <button onclick="Pregunta(false, '¡MAL hay!')">A) Memoria RAM</button>
+            <button onclick="Pregunta(true, ' La CPU procesa todos los datos.')">B) CPU (Procesador)</button>
+        </div>
+
+
+        <div class="pregunta-box">
+        <p><strong>2.  ¿cual de estos componentes el la parte fisica de la computadora?</strong></p>
+            <button onclick="Pregunta(true, ' Es memoria de acceso aleatorio temporal.')">A)B)hardware</button>
+            <button onclick="Pregunta(false, 'ufff.')">B)sortwate</button>
+        </div>
+        
+        <div class="pregunta-box">
+            <p><strong>3.  ¿la memoria ram es la que se encarga de guardar los archivos y fotos permanente mente?</strong></p>
+                <button onclick="Pregunta(true, 'la ram es una memoria que no es capaz de guardar por tanto tiempo los archivos y fotos .')">A)se borra por compreto </button>
+                <button onclick="Pregunta(false, 'hay.')">B)se guarda automaticamente</button>
+            </div>
+             
+        <div class="pregunta-box">
+            <p><strong>4. ¿cual es el dispositivo de entrarda ?</strong></p>
+            <button onclick="Pregunta( false, ':/' )">A)el monitor</button>
+            <button onclick="Pregunta(true, 'es el encargado de escribir y ingresar comandos hacia la computadora')">B) teclado</button>
+        </div>
+     <div class="pregunta-box">
+            <p><strong>5.  ¿cuan es la funcion de la placa madre?</strong></p>
+                <button onclick="Pregunta(true, ' La placa madre es la ENcaegada de  conectar  el CPU, la RAM, los discos y demás piezas')">A)comunica (osea  conecta a todos los componentes de la compudora entre si)</button>
+                <button onclick="Pregunta(false, 'MAL')">B)almacena los archivos permanete mente</button>
+            </div>
+    </main>
+    
+    <script>
+        function Pregunta(esCorrecta, mensaje) {
+            if(esCorrecta) {
+                alert("¡GENIO! " + mensaje);
+            } else {
+                alert("Lo siento, respuesta incorrecta. ¡Vuelve a intentarlo! (" + mensaje + ")");
+            }
+        }
+    </script>
+</body>
+</html>

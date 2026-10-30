@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>redes</title>
+    <link rel="stylesheet" href="redes.css">
+</head>
+<body>
+    <main>
+        <h2>las REDES</h2>
+        <p>Responde correctamente a la siguientes preguntas:)</p>
+        <div class="pregunta-box">
+            <p><strong>1. ¿la red lan es superior ala red wan?</strong></p>
+            <button onclick="Pregunta(false, 'enserio')">A) verdadero</button>
+            <button onclick="Pregunta(true, 'la red lan es muy pequeño comparado con el wan que tiene un alcance y tamaño inmenso que puede abarcar un pais. ')">B)  falso</button>
+        </div>
+
+
+        <div class="pregunta-box">
+        <p><strong>2.  ¿?</strong></p>
+            <button onclick="Pregunta(true, ' Es memoria de acceso aleatorio temporal.')">A) verdadero</button>
+            <button onclick="Pregunta(false, '.')">B) falso</button>
+        </div>
+        
+        <div class="pregunta-box">
+            <p><strong>3.  ¿?</strong></p>
+                <button onclick="Pregunta(false, '.')">A) verdadero</button>
+                <button onclick="Pregunta(true, '.')">B)falso </button>
+            </div>
+             
+        <div class="pregunta-box">
+            <p><strong>4. ¿ ?</strong></p>
+            <button onclick="Pregunta( true, ':/' )">A) verdadero</button>
+            <button onclick="Pregunta(false, '')">B) falso </button>
+        </div>
+     <div class="pregunta-box">
+            <p><strong>5.  ¿?</strong></p>
+                <button onclick="Pregunta(false, ' ')">A) verdadero</button>
+                <button onclick="Pregunta(true, '')">B)falso </button>
+            </div>
+    </main>
+    
+    <script>
+        function Pregunta(esCorrecta, mensaje) {
+            if(esCorrecta) {
+                alert("¡GENIO! " + mensaje);
+            } else {
+                alert("Lo siento, respuesta incorrecta. ¡Vuelve a intentarlo! (" + mensaje + ")");
+            }
+        }
+    </script>
+        
+</body>
+</html>
