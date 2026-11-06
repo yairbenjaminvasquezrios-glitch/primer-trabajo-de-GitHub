@@ -13,5 +13,19 @@ main {
     background: rgb(255, 58, 58);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border: 2px solid #ffffff;
+}
+#btnArriba {
+    position: fixed;       /* Se queda fijo en la pantalla al hacer scroll */
+    bottom: 20px;          /* Separación desde abajo */
+    right: 20px;           /* Separación desde la derecha */
+    background-color: #1A1A1A; /* Color Negro para combinar */
+    color: #FFFFFF;        /* Texto Blanco */
+    border: 2px solid #D90429; /* Borde Rojo */
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
 }
 

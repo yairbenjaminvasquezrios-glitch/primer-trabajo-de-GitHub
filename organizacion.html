@@ -1,56 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+<head> 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organización de las Computadoras</title>
-    <link rel="stylesheet" href="organizacion.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Organización de las Computadoras</title> 
+    <!-- Archivo CSS original -->
+    <link rel="stylesheet" href="organizacion.css"> 
+    <style> 
+    </style>
 </head>
-</body>
-    <main>
-        <h2>organizacion de las Computadoras</h2>
-        <p>Responde correctamente a la siguientes preguntas:</p>
+<body> 
+  <main>
+        <h2>Organización de las Computadoras</h2> 
+        <p>Responde correctamente a las siguientes preguntas:</p> 
 
-        
-        <div class="pregunta-box">
-            <p><strong>1. ¿Cuál es el componente considerado el "cerebro" de la computadora?</strong></p>
-            <button onclick="Pregunta(false, '¡MAL hay!')">A) Memoria RAM</button>
-            <button onclick="Pregunta(true, ' La CPU procesa todos los datos.')">B) CPU (Procesador)</button>
-        </div>
+        <!-- Pregunta 1 --> 
+        <div class="pregunta-box" id="p1"> 
+            <p><strong>1. ¿Cuál es el componente considerado el "cerebro" de la computadora?</strong></p> 
+            <button onclick="responder(1, false, '¡La RAM es volátil!')">A) Memoria RAM</button> 
+            <button onclick="responder(1, true, 'La CPU procesa todos los datos.')">B) CPU (Procesador)</button> 
+        </div> 
 
+        <!-- Pregunta 2 --> 
+        <div class="pregunta-box" id="p2"> 
+            <p><strong>2. ¿Cuál de estos componentes es la parte física de la computadora?</strong></p> 
+            <button onclick="responder(2, true, 'Es hardware.')">A) Hardware</button> 
+            <button onclick="responder(2, false, 'El software es lo intangible.')">B) Software</button> 
+        </div> 
 
-        <div class="pregunta-box">
-        <p><strong>2.  ¿cual de estos componentes el la parte fisica de la computadora?</strong></p>
-            <button onclick="Pregunta(true, ' Es memoria de acceso aleatorio temporal.')">A)B)hardware</button>
-            <button onclick="Pregunta(false, 'ufff.')">B)sortwate</button>
-        </div>
-        
-        <div class="pregunta-box">
-            <p><strong>3.  ¿la memoria ram es la que se encarga de guardar los archivos y fotos permanente mente?</strong></p>
-                <button onclick="Pregunta(true, 'la ram es una memoria que no es capaz de guardar por tanto tiempo los archivos y fotos .')">A)se borra por compreto </button>
-                <button onclick="Pregunta(false, 'hay.')">B)se guarda automaticamente</button>
-            </div>
-             
-        <div class="pregunta-box">
-            <p><strong>4. ¿cual es el dispositivo de entrarda ?</strong></p>
-            <button onclick="Pregunta( false, ':/' )">A)el monitor</button>
-            <button onclick="Pregunta(true, 'es el encargado de escribir y ingresar comandos hacia la computadora')">B) teclado</button>
-        </div>
-     <div class="pregunta-box">
-            <p><strong>5.  ¿cuan es la funcion de la placa madre?</strong></p>
-                <button onclick="Pregunta(true, ' La placa madre es la ENcaegada de  conectar  el CPU, la RAM, los discos y demás piezas')">A)comunica (osea  conecta a todos los componentes de la compudora entre si)</button>
-                <button onclick="Pregunta(false, 'MAL')">B)almacena los archivos permanete mente</button>
-            </div>
-    </main>
-    
-    <script>
-        function Pregunta(esCorrecta, mensaje) {
-            if(esCorrecta) {
-                alert("¡GENIO! " + mensaje);
-            } else {
-                alert("Lo siento, respuesta incorrecta. ¡Vuelve a intentarlo! (" + mensaje + ")");
-            }
-        }
-    </script>
+        <!-- Pregunta 3 --> 
+        <div class="pregunta-box" id="p3"> 
+            <p><strong>3. ¿La memoria RAM es la que se encarga de guardar los archivos y fotos permanentemente?</strong></p> 
+            <button onclick="responder(3, true, 'La RAM se borra al apagar el equipo.')">A) Se borra por completo</button> 
+            <button onclick="responder(3, false, 'No se guarda sola.')">B) Se guarda automáticamente</button> 
+        </div> 
+
+        <!-- Pregunta 4 --> 
+        <div class="pregunta-box" id="p4"> 
+            <p><strong>4. ¿Cuál es el dispositivo de entrada?</strong></p> 
+            <button onclick="responder(4, false, 'El monitor es de salida.')">A) El monitor</button> 
+            <button onclick="responder(4, true, 'El teclado permite ingresar comandos.')">B) Teclado</button> 
+        </div> 
+
+        <!-- Pregunta 5 --> 
+        <div class="pregunta-box" id="p5"> 
+            <p><strong>5. ¿Cuál es la función de la placa madre?</strong></p> 
+            <button onclick="responder(5, true, 'Conecta todos los componentes de la computadora entre sí.')">A) Comunica los componentes</button> 
+            <button onclick="responder(5, false, 'Eso lo hace el disco duro o SSD.')">B) Almacena los archivos permanentemente</button> 
+        </div> 
+        <div id="contenedor-panel"></div> 
+        <button id="btnArriba" onclick="window.location.href='trabajofinal.html'">▲ Ir al Inicio</button>
+     </main>
+    <script src="organizacion.js"></script>
 </body>
 </html>

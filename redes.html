@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>redes</title>
+    <link rel="stylesheet" href="redes.css">
+</head>
+<body>
+    <main>
+        <h2>las REDES</h2>
+        <p>Responde correctamente a las siguientes preguntas:)</p>
+        
+        <!-- Pregunta 1 -->
+        <div class="pregunta-box" id="p1">
+            <p><strong>1. ¿La red LAN es superior a la red WAN?</strong></p>
+            <button onclick="Pregunta(1, false, 'enserio')">A) verdadero</button>
+            <button onclick="Pregunta(1, true, 'La red lan es muy pequeña comparada con la wan que tiene un alcance y tamaño inmenso.')">B) falso</button>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="pregunta-box" id="p2">
+            <p><strong>2. ¿En una red de estrella, si falla, toda la red deja de funcionar por completo?</strong></p>
+            <button onclick="Pregunta(2, true, 'La red de estrella se conectan directamente con todos los dispositivos al centro.')">A) verdadero</button>
+            <button onclick="Pregunta(2, false, '....')">B) falso</button>
+        </div>
+        
+        <!-- Pregunta 3 -->
+        <div class="pregunta-box" id="p3">
+            <p><strong>3. ¿El Bluetooth y Wi-Fi son del mismo tipo de red inalámbrica?</strong></p>
+            <button onclick="Pregunta(3, false, 'sicopata')">A) verdadero</button>
+            <button onclick="Pregunta(3, true, 'Ambas pertenecen a diferentes redes: wi-fi a WLAN y bluetooth al WPAN.')">B) falso</button>
+        </div>
+             
+        <!-- Pregunta 4 -->
+        <div class="pregunta-box" id="p4">
+            <p><strong>4. ¿El 4G y el 5G se clasifican como redes WWAN?</strong></p>
+            <button onclick="Pregunta(4, true, 'Son el ejemplo perfecto porque el WWAN se encarga de transferir datos a enormes distancias.')">A) verdadero</button>
+            <button onclick="Pregunta(4, false, 'niga')">B) falso</button>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="pregunta-box" id="p5">
+            <p><strong>5. ¿Las redes inalámbricas son más seguras porque es matemáticamente imposible hackear datos que viajan por el aire?</strong></p>
+            <button onclick="Pregunta(5, false, 'ijoputa')">A) verdadero</button>
+            <button onclick="Pregunta(5, true, 'Dado que la señal es incontrolable y libre, cualquiera puede captarla.')">B) falso</button>
+        </div>
+
+        <div id="contenedor-panel"></div> 
+    </main>
+    <script src="redes.js"></script>
+</body>
+</html>
