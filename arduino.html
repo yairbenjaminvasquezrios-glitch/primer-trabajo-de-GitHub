@@ -1,56 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+<head> 
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>arduino</title>
-    <link rel="stylesheet" href="arduino.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Organización de las Computadoras</title> 
+    <!-- Archivo CSS original -->
+    <link rel="stylesheet" href="arduino.css"> 
+    <style> 
+    </style>
 </head>
-<body>
-    <main>
-        <h2>el Arduino</h2>
-        <p>Responde correctamente a la siguientes preguntas:)</p>
-        <div class="pregunta-box">
-            <p><strong>1. ¿?</strong></p>
-            <button onclick="Pregunta(true, '')">A) verdadero</button>
-            <button onclick="Pregunta(false,'')">B)  falso</button>
-        </div>
+<body> 
+  <main>
+        <h2>arduino</h2> 
+        <p>Responde correctamente a las siguientes preguntas:</p> 
 
+        <!-- Pregunta 1 --> 
+        <div class="pregunta-box" id="p1"> 
+            <p><strong>1. ¿?</strong></p> 
+            <button onclick="responder(1, false, '')">A) </button> 
+            <button onclick="responder(1, true, '.')">B) </button> 
+        </div> 
 
-        <div class="pregunta-box">
-        <p><strong>2.  ¿?</strong></p>
-            <button onclick="Pregunta(true, '')">A) verdadero</button>
-            <button onclick="Pregunta(false, '')">B) falso</button>
-        </div>
-        
-        <div class="pregunta-box">
-            <p><strong>3.  ¿?</strong></p>
-                <button onclick="Pregunta(false, '')">A) verdadero</button>
-                <button onclick="Pregunta(true, '')">B)falso </button>
-            </div>
-             
-        <div class="pregunta-box">
-            <p><strong>4. ¿  ?</strong></p>
-            <button onclick="Pregunta( true, '' )">A) verdadero</button>
-            <button onclick="Pregunta(false, '')">B) falso </button>
-        </div>
-     <div class="pregunta-box">
-            <p><strong>5.  ¿ ?</strong></p>
-                <button onclick="Pregunta(false, ' ')">A) verdadero</button>
-                <button onclick="Pregunta(true, '')">B) falso </button>
-            </div>
-    </main>
-    
-    <script>
-        function Pregunta(esCorrecta, mensaje) {
-            if(esCorrecta) {
-                alert("¡GENIO! " + mensaje);
-            } else {
-                alert("Lo siento, respuesta incorrecta. ¡Vuelve a intentarlo! (" + mensaje + ")");
-            }
-        }
-    </script>
-        
+        <!-- Pregunta 2 --> 
+        <div class="pregunta-box" id="p2"> 
+            <p><strong>2. ¿?</strong></p> 
+            <button onclick="responder(2, true, '.')">A) </button> 
+            <button onclick="responder(2, false, '.')">B) </button> 
+        </div> 
+
+        <!-- Pregunta 3 --> 
+        <div class="pregunta-box" id="p3"> 
+            <p><strong>3. ¿?</strong></p> 
+            <button onclick="responder(3, true, '.')">A) </button> 
+            <button onclick="responder(3, false, '.')">B) </button> 
+        </div> 
+
+        <!-- Pregunta 4 --> 
+        <div class="pregunta-box" id="p4"> 
+            <p><strong>4. ¿?</strong></p> 
+            <button onclick="responder(4, false, '.')">A) </button> 
+            <button onclick="responder(4, true, '.')">B) </button> 
+        </div> 
+
+        <!-- Pregunta 5 --> 
+        <div class="pregunta-box" id="p5"> 
+            <p><strong>5. ¿?</strong></p> 
+            <button onclick="responder(5, true, '')">A) </button> 
+            <button onclick="responder(5, false, '.')">B)</button> 
+        </div> 
+        <div id="contenedor-panel"></div> 
+        <button id="btnArriba" onclick="window.location.href='trabajofinal.html'">▲ Ir al Inicio</button>
+     </main>
+    <script src="arduino.js"></script>
 </body>
 </html>
