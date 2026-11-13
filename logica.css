@@ -1,0 +1,37 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+ 
+    color: rgb(0, 0, 0);
+    background :url(https://m.media-amazon.com/images/I/51gT6fncV8L._AC_UF894,1000_QL80_.jpg) no-repeat center/cover;
+
+}
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 2px solid #000000;
+    border-radius: 8px;
+}
+div {
+  
+    color: rgb(0, 0, 0);
+}
+button {
+    background-color: #ffeaea; 
+}
+#btnArriba {
+    position: fixed;       /* Se queda fijo en la pantalla al hacer scroll */
+    bottom: 20px;          /* Separación desde abajo */
+    right: 20px;           /* Separación desde la derecha */
+    background-color: #1A1A1A; /* Color Negro para combinar */
+    color: #FFFFFF;        /* Texto Blanco */
+    border: 2px solid #D90429; /* Borde Rojo */
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+

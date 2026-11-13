@@ -1,23 +1,24 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color:  #00979d;
-    color: rgb(0, 0, 0);
+    background :url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxCEigeS556bQRqDnQ93M7hKx1UHxbYjmem3WuyNlkMw&s) no-repeat center/cover;
+
 }
 main {
     max-width: 800px;
     margin: 2rem auto;
     padding: 2rem;
-    background: #c9bfbf;
     border-radius: 8px;
+    border: 2px solid #ffffff;
 }
+p {
+    font-size: 24px;
+  }
+  
 div {
-    background-color:#008184;
-    color: rgb(255, 244, 244);
+    color: rgb(24, 209, 0);
 }
 button {
-    background-color: #ffeaea; 
+    background-color: #013f9c; 
 }
 #btnArriba {
     position: fixed;       /* Se queda fijo en la pantalla al hacer scroll */
