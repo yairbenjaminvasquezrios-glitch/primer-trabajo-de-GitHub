@@ -1,7 +1,7 @@
 let correctas = 0; 
 let incorrectas = 0; 
 
-// Creamos el panel de resultados
+// Creamos la estructura HTML del panel mediante JavaScript al cargar la página
 function crearPanel() {
     const contenedor = document.getElementById('contenedor-panel');
     contenedor.innerHTML = `
@@ -14,19 +14,10 @@ function crearPanel() {
     `;
 }
 
+// Ejecutamos la función para que el panel aparezca desde el principio
 crearPanel();
 
-function Pregunta(numPregunta, esCorrecta, mensaje) { 
-    // 1. Buscamos la caja de la pregunta usando el número (id="p1", id="p2", etc.)
-    let caja = document.getElementById('p' + numPregunta);
-    let botones = caja.getElementsByTagName('button');
-
-    // 2. Deshabilitamos los botones INMEDIATAMENTE para que no se pueda hacer doble clic
-    for (let i = 0; i < botones.length; i++) {
-        botones[i].disabled = true;
-    }
-
-    // 3. Evaluamos si es correcta o no
+function responder(numPregunta, esCorrecta, mensaje) { 
     if (esCorrecta) { 
         alert("¡GENIO! " + mensaje); 
         correctas++; 
@@ -35,7 +26,6 @@ function Pregunta(numPregunta, esCorrecta, mensaje) {
         incorrectas++; 
     } 
 
-    // 4. Calculamos el porcentaje sobre las respondidas
     let respondidas = correctas + incorrectas; 
     let porcentajeMal = 0; 
 
@@ -43,8 +33,15 @@ function Pregunta(numPregunta, esCorrecta, mensaje) {
         porcentajeMal = (incorrectas / respondidas) * 100; 
     } 
 
-    // 5. Mostramos los datos actualizados en el panel
+    // Actualizamos los valores dentro del HTML generado
     document.getElementById('ok').innerText = correctas; 
     document.getElementById('mal').innerText = incorrectas; 
     document.getElementById('porcentaje').innerText = porcentajeMal.toFixed(1) + "%"; 
+
+    // Deshabilitamos los botones de esta pregunta
+    let caja = document.getElementById('p' + numPregunta); 
+    let botones = caja.getElementsByTagName('button'); 
+    for (let i = 0; i < botones.length; i++) { 
+        botones[i].disabled = true; 
+    } 
 }
