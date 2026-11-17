@@ -45,3 +45,4 @@ function responder(numPregunta, esCorrecta, mensaje) {
         botones[i].disabled = true; 
     } 
 }
+
