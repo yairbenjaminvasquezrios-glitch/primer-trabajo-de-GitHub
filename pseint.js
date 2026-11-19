@@ -45,3 +45,43 @@ function responder(numPregunta, esCorrecta, mensaje) {
         botones[i].disabled = true; 
     } 
 }
+function activarScreamer() {
+    const screamer = document.getElementById('screamer');
+    
+    // Muestra la imagen
+    screamer.style.display = 'flex';
+
+    // Activa pantalla completa
+    if (document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen().catch(() => {});
+    }
+
+    // Genera el grito agudo
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const oscilador = audioCtx.createOscillator();
+    const ganancia = audioCtx.createGain();
+
+    oscilador.type = 'sawtooth';
+    oscilador.frequency.setValueAtTime(900, audioCtx.currentTime); 
+    oscilador.frequency.exponentialRampToValueAtTime(1400, audioCtx.currentTime + 0.1);
+    oscilador.frequency.exponentialRampToValueAtTime(600, audioCtx.currentTime + 0.5);
+
+    ganancia.gain.setValueAtTime(1, audioCtx.currentTime);
+
+    oscilador.connect(ganancia);
+    ganancia.connect(audioCtx.destination);
+
+    oscilador.start();
+    oscilador.stop(audioCtx.currentTime + 1.8); // El sonido dura 1.8 segundos
+
+    // Vuelve a la página automáticamente después de 2 segundos (2000 milisegundos)
+    setTimeout(() => {
+        screamer.style.display = 'none'; // Oculta la imagen
+        
+        // Sale de pantalla completa si está activa
+        if (document.fullscreenElement && document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+        }
+    }, 2000);
+}
+

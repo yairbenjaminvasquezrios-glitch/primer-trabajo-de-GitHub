@@ -46,3 +46,4 @@ function responder(numPregunta, esCorrecta, mensaje) {
     } 
 }
 
+

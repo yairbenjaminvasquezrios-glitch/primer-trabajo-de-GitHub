@@ -1,0 +1,39 @@
+body {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background :url(https://www.codemotion.com/magazine/wp-content/uploads/2024/02/css-meme-esp.png) no-repeat center/cover;
+    margin: 0;
+    padding: 0;
+    height: 200vh;
+    background-position: center;
+}  
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 2px solid #000000;
+}
+p {
+    font-size: 24px;
+  }
+  
+div {
+    color: rgb(0, 0, 0);
+}
+button {
+    background-color: #013f9c; 
+}
+#btnArriba {
+    position: fixed;       /* Se queda fijo en la pantalla al hacer scroll */
+    bottom: 20px;          /* Separación desde abajo */
+    right: 20px;           /* Separación desde la derecha */
+    background-color: #1A1A1A; /* Color Negro para combinar */
+    color: #FFFFFF;        /* Texto Blanco */
+    border: 2px solid #D90429; /* Borde Rojo */
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
