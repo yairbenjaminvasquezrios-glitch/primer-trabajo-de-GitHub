@@ -1,17 +1,27 @@
 body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin: 0;
-        padding: 0;
-        background :url(https://libros.catedu.es/uploads/images/gallery/2022-07/scaled-1680-/pseint-scratch.png) no-repeat center/cover;
-        height: 200vh;
-        background-position: center;
-}  
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url(https://plataforma.josedomingo.org/pledin/_astro/pseint.Bz58JKqI_Z4wHRF.webp) no-repeat center center fixed;
+    background-size: cover;
+}
+
+img {
+    max-width: 300px;   /* Evita que la imagen sea gigante y empuje o tape todo */
+    height: auto;       /* Mantiene la proporción sin deformarse */
+    float: left;        /* Mantiene el texto rodeando la foto */
+    margin-right: 20px; /* Espacio a la derecha */
+    margin-bottom: 15px;/* Espacio abajo */
+}
+
 main {
     max-width: 800px;
     margin: 2rem auto;
     padding: 2rem;
     border-radius: 8px;
+    overflow: hidden;   /* Evita que la imagen con float se salga fuera de la caja */
 }
+
 p {
     font-size: 24px;
   }
